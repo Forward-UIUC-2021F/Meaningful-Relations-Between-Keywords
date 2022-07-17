@@ -3,7 +3,7 @@ import SnippetDetails
 import json
 import sys
 
-DATA_DIR = "/Users/ashutoshukey/Downloads/Forward_Data_Lab/Code/data/Papers"
+DATA_DIR = "/home/aukey2/dev-keyword-pages/data"
 
 PAPERS_FILE = f"{DATA_DIR}/filtered_arxiv.json"
 PAPERS_LEMMA_FILE = f"{DATA_DIR}/filtered_arxiv_lemmatized.json"
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     keyword = sys.argv[1]
     q_keyword = sys.argv[2]
 
-    res = FindRelationship.FindRelationshipModifiedJson("Tree", "Data Structure", PAPERS_FILE, PAPERS_LEMMA_FILE)
+    res = FindRelationship.FindRelationshipModifiedJson(keyword, q_keyword, PAPERS_FILE, PAPERS_LEMMA_FILE)
     # res = FindRelationship.FindRelationshipModifiedJson(keyword, q_keyword, PAPERS_FILE, PAPERS_LEMMA_FILE)
 
     # print(json.dumps(res, indent=4))
